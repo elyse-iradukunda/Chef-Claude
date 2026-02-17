@@ -1,15 +1,13 @@
 import { useState } from "react";
 
 export default function Main() {
-  const [items, setItems] = useState(["banana", "orange", "water melon"]);
+  const [items, setItems] = useState(["banana", "orange", "water melon","Avocado"]);
   const [inputValue, setInputValue] = useState("");
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    if (inputValue.trim() !== "") {
-      setItems([...items, inputValue]);
-      setInputValue("");
-    }
+  function handleSubmit(e) {
+    e.preventDefault();
+    setItems([...items, inputValue]);
+    setInputValue("");
   }
 
   return (
